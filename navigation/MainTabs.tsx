@@ -21,6 +21,7 @@ export default function MainTabs() {
         name="Chats"
         component={ChatsScreen}
         options={{
+          headerShown:false,
           tabBarIcon: ({ color, size }) => (
             <Icon name="comment" color={color} size={size} />
           )
@@ -30,6 +31,7 @@ export default function MainTabs() {
         name="Contact"
         component={ContactScreen}
         options={{
+          headerShown:false,
           tabBarIcon: ({ color, size }) => (
             <Icon name="account-multiple" color={color} size={size} />
           )
@@ -39,6 +41,7 @@ export default function MainTabs() {
           name="Settings"
           component={SettingsScreen}
           options={{
+            headerShown:false,
             tabBarIcon: ({ color, size }) => (
               <Icon name="cog" color={color} size={size} /> // instead of "settings"
             )
@@ -48,6 +51,7 @@ export default function MainTabs() {
         name="Profile"
         component={ProfileScreen}
         options={{
+          headerShown:false,
           tabBarIcon: ({ color, size }) => (
             <Icon name="account-circle" color={color} size={size} />
           )
@@ -57,6 +61,7 @@ export default function MainTabs() {
         name="Notification"
         component={NotificationScreen}
         options={{
+          headerShown:false,
           tabBarIcon: ({ color, size }) => (
             <Icon name="bell" color={color} size={size} />
           )

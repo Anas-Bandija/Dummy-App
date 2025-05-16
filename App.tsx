@@ -17,9 +17,12 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator>
         {!isLoggedIn ? (
-          <Stack.Screen name="Auth">
+          <Stack.Screen
+            name="Auth"
+            options={{ headerShown: false }}
+          >
             {(props: any) => (
               <AuthScreen
                 isLogin={isLogin}
@@ -29,7 +32,11 @@ export default function App() {
             )}
           </Stack.Screen>
         ) : (
-          <Stack.Screen name="MainTabs" component={MainTabs} />
+          <Stack.Screen
+            name="MainTabs"
+            component={MainTabs}
+            options={{ headerShown: false }} // ✅ Hide Stack header
+          />
         )}
       </Stack.Navigator>
     </NavigationContainer>
